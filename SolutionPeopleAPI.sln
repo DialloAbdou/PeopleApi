@@ -3,9 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{928155AF-CCF8-45C5-9131-3E4B3A1EB95E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A9AD6825-A39D-4405-B32C-D7BFA54B92F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleApi", "src\PeopleApi\PeopleApi.csproj", "{50A83A59-EEB9-4277-9390-E4FB3447D854}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleApiTest", "tests\PeopleApiTest\PeopleApiTest.csproj", "{CB9745F9-A0A1-4F94-A374-C3E64002DF15}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50A83A59-EEB9-4277-9390-E4FB3447D854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A83A59-EEB9-4277-9390-E4FB3447D854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A83A59-EEB9-4277-9390-E4FB3447D854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A83A59-EEB9-4277-9390-E4FB3447D854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB9745F9-A0A1-4F94-A374-C3E64002DF15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB9745F9-A0A1-4F94-A374-C3E64002DF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB9745F9-A0A1-4F94-A374-C3E64002DF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB9745F9-A0A1-4F94-A374-C3E64002DF15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50A83A59-EEB9-4277-9390-E4FB3447D854} = {928155AF-CCF8-45C5-9131-3E4B3A1EB95E}
+		{CB9745F9-A0A1-4F94-A374-C3E64002DF15} = {A9AD6825-A39D-4405-B32C-D7BFA54B92F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6614B9C3-7966-4184-8B94-2E4AE6E68A0F}

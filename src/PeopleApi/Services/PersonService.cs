@@ -3,17 +3,27 @@ using PeopleApi.Data;
 
 namespace PeopleApi.Services
 {
-    public class PersonService
+    public class PersonService : IPersonService
     {
-        private  readonly PersonDbContext _context;
-        public PersonService(PersonDbContext context)
+        private  readonly IPersonRepository _personRepository;
+        public PersonService(IPersonRepository personRepository)
         { 
-            _context = context;
+          _personRepository = personRepository;
         }
 
-        public async Task<IEnumerable<Person>> GetAll()
+        public async Task AddPersonAsync(Person person)
         {
-            return await _context.Persons.ToListAsync(); ;    
+            await _personRepository.AddPersonAsync(person);
+        }
+
+        public async Task<IEnumerable<Person>> GetAllPerson()
+        {
+             return  await _personRepository.GetAllAsync();
+        }
+
+        public async Task<Person> GetPersonById(int id)
+        {
+            return await _personRepository.GetPersonAsync(id);
         }
     }
 }

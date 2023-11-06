@@ -6,7 +6,6 @@ namespace PeopleApi.Controllers
 {
     public class PersonController : Controller
     {
-
         private readonly PersonService _personService;
         public PersonController( PersonService personService)
         {
@@ -17,7 +16,7 @@ namespace PeopleApi.Controllers
         [HttpGet]
         public async Task<IActionResult>GetAsync()
         {
-            return Ok( await _personService.GetAll());
+            return Ok(await _personService.GetAllPerson());
         }
 
     }
